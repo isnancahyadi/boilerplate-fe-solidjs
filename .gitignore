@@ -11,6 +11,9 @@ app.config.timestamp_*.js
 .env.*
 !.env.example
 
+# Local prompts
+PROMPT.md
+
 # Logs and generated test output
 *.log
 coverage/
