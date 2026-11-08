@@ -1,0 +1,37 @@
+{
+  "button": {
+    "create": "Tambah",
+    "edit": "Ubah",
+    "delete": "Hapus",
+    "save": "Simpan",
+    "cancel": "Batal",
+    "submit": "Kirim",
+    "search": "Cari",
+    "login": "Masuk",
+    "logout": "Keluar"
+  },
+  "placeholder": {
+    "search": "Cari data...",
+    "select": "Pilih salah satu",
+    "enterName": "Masukkan nama",
+    "enterEmail": "Masukkan email"
+  },
+  "status": {
+    "active": "Aktif",
+    "inactive": "Tidak Aktif",
+    "pending": "Menunggu",
+    "archived": "Diarsipkan"
+  },
+  "message": {
+    "success": "Operasi berhasil diselesaikan",
+    "error": "Terjadi kesalahan, silakan coba lagi",
+    "confirmDelete": "Apakah Anda yakin ingin menghapus data ini?"
+  },
+  "common": {
+    "appName": "SolidStart Boilerplate",
+    "dashboard": "Dashboard",
+    "actions": "Aksi",
+    "date": "Tanggal",
+    "noData": "Tidak ada data tersedia"
+  }
+}

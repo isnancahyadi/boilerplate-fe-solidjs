@@ -1,0 +1,102 @@
+/**
+ * Design Tokens — OKLCH 3-Layer Architecture
+ *
+ * Mode: Light-First (Default) dengan dukungan Dark Mode (.dark / [data-theme="dark"])
+ */
+
+:root {
+  /* =====================================================================
+   * BRAND & PRIMARY (LIGHT MODE DEFAULT)
+   * Kustomisasi warna utama brand proyek dengan mengubah nilai OKLCH ini
+   * ===================================================================== */
+  --primary: oklch(55% 0.18 250);
+  --primary-hover: oklch(48% 0.18 250);
+  --primary-foreground: oklch(98% 0 0);
+
+  /* Tiered Surfaces (Light Mode) */
+  --background: oklch(99% 0 0);
+  --surface-primary: oklch(97% 0.003 247);
+  --surface-secondary: oklch(95% 0.004 247);
+  --surface-tertiary: oklch(92% 0.006 247);
+  --surface-elevated: oklch(100% 0 0);
+
+  /* Text & Contrast (Light Mode) */
+  --foreground: oklch(20% 0.02 260);
+  --muted-foreground: oklch(50% 0.02 260);
+
+  /* Borders & Dividers */
+  --border: oklch(88% 0.005 250);
+  --input-border: oklch(84% 0.006 250);
+
+  /* Status Tokens */
+  --success: oklch(62% 0.17 145);
+  --success-foreground: oklch(98% 0 0);
+  --warning: oklch(75% 0.16 75);
+  --warning-foreground: oklch(20% 0.02 75);
+  --info: oklch(60% 0.16 240);
+  --info-foreground: oklch(98% 0 0);
+  --destructive: oklch(58% 0.22 27);
+  --destructive-foreground: oklch(98% 0 0);
+
+  /* Radius */
+  --radius: 0.5rem;
+}
+
+/* =====================================================================
+ * DARK MODE TOKENS OVERRIDE
+ * Aktif saat selector .dark atau [data-theme="dark"] terpasang
+ * ===================================================================== */
+.dark,
+[data-theme="dark"] {
+  --primary: oklch(65% 0.18 250);
+  --primary-hover: oklch(72% 0.18 250);
+  --primary-foreground: oklch(15% 0.02 250);
+
+  --background: oklch(18% 0.01 260);
+  --surface-primary: oklch(22% 0.01 260);
+  --surface-secondary: oklch(26% 0.01 260);
+  --surface-tertiary: oklch(30% 0.01 260);
+  --surface-elevated: oklch(24% 0.01 260);
+
+  --foreground: oklch(96% 0 0);
+  --muted-foreground: oklch(65% 0.01 260);
+
+  --border: oklch(32% 0.01 260);
+  --input-border: oklch(36% 0.01 260);
+
+  --info: oklch(68% 0.16 240);
+  --info-foreground: oklch(15% 0.02 240);
+  --destructive: oklch(62% 0.2 27);
+}
+
+/* =====================================================================
+ * TAILWIND CSS V4 THEME MAPPING (LAYER 2)
+ * ===================================================================== */
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-background: var(--background);
+  --color-surface-primary: var(--surface-primary);
+  --color-surface-secondary: var(--surface-secondary);
+  --color-surface-tertiary: var(--surface-tertiary);
+  --color-surface-elevated: var(--surface-elevated);
+
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input-border);
+
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --radius-md: var(--radius);
+}

@@ -1,0 +1,15 @@
+# Cursor Rules — Ark UI & SolidStart Boilerplate
+
+## Ark UI Documentation (LLMs.txt)
+- Main Documentation (SolidJS): https://ark-ui.com/llms-solid.txt
+- Component Endpoints: https://ark-ui.com/llms.txt/components/{component}?framework=solid
+- Full Index: https://ark-ui.com/llms.txt
+- Local Quick Index: .agents/skills/ark-ui/references/components-index.md
+
+Use the @Docs feature in Cursor with `https://ark-ui.com/llms-solid.txt` for real-time Ark UI component APIs, anatomy, and examples.
+
+## Key Rules
+1. **Ark UI Primitives**: Build components in `src/components/ui/` using `@ark-ui/solid/*` + Tailwind CSS v4 + CVA.
+2. **Reactivity (Strict)**: NEVER destructure props directly. Use `splitProps(props, [...])` or access via `props.*`.
+3. **Design Tokens**: Use OKLCH semantic tokens (`bg-background`, `text-foreground`, `border-border`, etc.). Never hardcode hex values.
+4. **Icons**: Use `lucide-solid`.

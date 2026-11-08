@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+# Checking whether the environment variable CZ_COMMIT is set to "1"
+if [ "$CZ_COMMIT" != "1" ]; then
+  echo ""
+  echo "=================================================================="
+  echo "❌ ERROR: Committing manually or via the VS Code UI is not permitted!"
+  echo "💡 Please use the following command in the terminal to perform a commit:"
+  echo ""
+  echo "   pnpm git:commit   (or yarn git:commit / npm run git:commit)"
+  echo "=================================================================="
+  echo ""
+  exit 1
+fi
+
+# Validate commit message format using Commitlint
+pnpx commitlint --edit "$1"
+

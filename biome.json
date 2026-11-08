@@ -1,0 +1,133 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.6.4/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "includes": ["src/**/*", "test/**/*", "e2e/**/*", "*.{js,ts,jsx,tsx,json,jsonc}"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 120
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "recommended",
+      "suspicious": {
+        "noExplicitAny": "error",
+        "noImplicitAnyLet": "error"
+      },
+      "correctness": {
+        "noUnusedImports": "error",
+        "noUnusedVariables": "error"
+      },
+      "style": {
+        "noNonNullAssertion": "warn",
+        "useConsistentArrayType": {
+          "level": "error",
+          "options": {
+            "syntax": "generic"
+          }
+        }
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off",
+        "useFocusableInteractive": "off",
+        "useSemanticElements": "off",
+        "useAriaPropsSupportedByRole": "off"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "trailingCommas": "all",
+      "semicolons": "always"
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              ":URL:",
+              ":BLANK_LINE:",
+              [":PACKAGE_WITH_PROTOCOL:", ":NODE:"],
+              ":BLANK_LINE:",
+              ":PACKAGE:",
+              ":BLANK_LINE:",
+              [
+                {
+                  "type": true,
+                  "source": [":PACKAGE:", "~/types/**", "~/types/common/**", "~/types/schema/**", ":PATH:"]
+                },
+                "~/types/**",
+                "~/types/common/**",
+                "~/types/schema/**"
+              ],
+              ":BLANK_LINE:",
+              [
+                {
+                  "type": true,
+                  "source": [
+                    ":PACKAGE:",
+                    "~/features/*/types/**",
+                    "~/features/*/types/common/**",
+                    "~/features/*/types/schema/**"
+                  ]
+                },
+                "~/features/*/types/**",
+                "~/features/*/types/common/**",
+                "~/features/*/types/schema/**"
+              ],
+              ":BLANK_LINE:",
+              ["~/config/**", "~/context/**", "~/hooks/**"],
+              ":BLANK_LINE:",
+              ["~/stores/**", "~/locales/**"],
+              ":BLANK_LINE:",
+              [
+                "~/components/ui/**",
+                "~/components/common/**",
+                "~/components/layouts/**",
+                "~/components/shared/**",
+                "~/components/**"
+              ],
+              ":BLANK_LINE:",
+              ["~/lib/utils/**", "~/lib/constants/**", "~/lib/**"],
+              ":BLANK_LINE:",
+              ["~/lib/data/endpoint/**", "~/lib/data/api/**", "~/lib/data/service/**"],
+              ":BLANK_LINE:",
+              ["~/features/*/hooks/**"],
+              ":BLANK_LINE:",
+              ["~/features/*/components/form/**", "~/features/*/components/common/**", "~/features/*/components/**"],
+              ":BLANK_LINE:",
+              ["~/features/*/lib/utils/**", "~/features/*/lib/constants/**", "~/features/*/lib/**"],
+              ":BLANK_LINE:",
+              ["~/features/*/lib/data/endpoint/**", "~/features/*/lib/data/api/**", "~/features/*/lib/data/service/**"],
+              ":BLANK_LINE:",
+              ["~/assets/icons/**", "~/assets/images/**", "~/assets/styles/**"],
+              ":BLANK_LINE:",
+              "~/**",
+              ":BLANK_LINE:",
+              ":PATH:"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

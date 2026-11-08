@@ -1,0 +1,27 @@
+#!/bin/bash
+echo "Running pre-push checks..."
+
+# Security audit check
+echo "Running security audit..."
+if ! pnpm run security:audit; then
+  echo "Security vulnerabilities found. Please fix them before pushing."
+  exit 1
+fi
+
+# Check for test
+if ! pnpm test; then
+  echo "Testing issues found. Please check you code before committing."
+  exit 1
+fi
+if ! pnpm test:e2e; then
+  echo "Testing E2E issues found. Please check you code before committing."
+  exit 1
+fi
+
+# Build project
+if ! pnpm build; then
+  echo "Build failed. Please fix your code before push"
+  exit 1
+fi
+echo "Pre-push check passed"
+exit 0

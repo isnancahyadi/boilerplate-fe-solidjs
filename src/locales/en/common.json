@@ -1,0 +1,37 @@
+{
+  "button": {
+    "create": "Create",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "search": "Search",
+    "login": "Sign In",
+    "logout": "Sign Out"
+  },
+  "placeholder": {
+    "search": "Search...",
+    "select": "Select an option",
+    "enterName": "Enter name",
+    "enterEmail": "Enter email"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "pending": "Pending",
+    "archived": "Archived"
+  },
+  "message": {
+    "success": "Operation completed successfully",
+    "error": "An error occurred, please try again",
+    "confirmDelete": "Are you sure you want to delete this data?"
+  },
+  "common": {
+    "appName": "SolidStart Boilerplate",
+    "dashboard": "Dashboard",
+    "actions": "Actions",
+    "date": "Date",
+    "noData": "No data available"
+  }
+}

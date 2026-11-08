@@ -1,0 +1,15 @@
+# Windsurf Rules — Ark UI & SolidStart Boilerplate
+
+## Ark UI Documentation (LLMs.txt)
+- Main Documentation (SolidJS): https://ark-ui.com/llms-solid.txt
+- Component Endpoints: https://ark-ui.com/llms.txt/components/{component}?framework=solid
+- Full Index: https://ark-ui.com/llms.txt
+- Local Quick Index: .agents/skills/ark-ui/references/components-index.md
+
+Reference the LLMs.txt files using `@` or check the URLs above for Ark UI component specifications, state machines, and anatomy.
+
+## Architecture Guidelines
+1. **Ark UI Primitives**: UI primitives live in `src/components/ui/` with pure copy-paste ownership. Use `@ark-ui/solid/<component>`.
+2. **Reactivity**: NEVER destructure props in SolidJS component functions. Use `splitProps(props, ["variant", "class", ...])`.
+3. **Tailwind v4 & CVA**: Define component variants with `cva` and style data attributes (`data-[state=open]:...`). Use semantic tokens.
+4. **Icons**: Use `lucide-solid`.

@@ -1,0 +1,27 @@
+---
+description: Ark UI SolidJS Primitives & LLMs.txt integration
+globs: src/components/ui/**/*.tsx, src/components/common/**/*.tsx, src/features/**/*.tsx
+alwaysApply: true
+---
+
+# Ark UI SolidJS Documentation & LLMs.txt Rules
+
+When creating, updating, or styling UI components in this SolidStart project, adhere to the following rules:
+
+## 1. Documentation Source (LLMs.txt)
+- **SolidJS Documentation (Complete)**: `https://ark-ui.com/llms-solid.txt`
+- **Markdown Component URL**: `https://ark-ui.com/llms.txt/components/{component}?framework=solid`
+- **Component Index**: `https://ark-ui.com/llms.txt`
+- **Local Quick Index**: `.agents/skills/ark-ui/references/components-index.md`
+- **Cursor @Docs**: Add `https://ark-ui.com/llms-solid.txt` to Cursor Docs settings for live context.
+
+## 2. SolidJS Reactivity Rules (Strict)
+- **NEVER** destructure component props directly in function parameters (e.g., `({ variant, class, ...props })` breaks reactivity).
+- **ALWAYS** use `splitProps(props, ["variant", "size", "class", "children"])` from `solid-js` when separating props.
+- Otherwise, access props directly as `props.propertyName`.
+
+## 3. Styling & CVA Pattern
+- Place primitives in `src/components/ui/<component>.tsx`.
+- Combine Ark UI (`@ark-ui/solid/<component>`) with `class-variance-authority` (`cva`) and `cn()` from `~/lib/utils`.
+- Use semantic Tailwind CSS v4 tokens (`bg-background`, `text-foreground`, `border-border`, `bg-primary`, etc.). **Do not use hardcoded hex colors.**
+- Leverage Ark UI state attributes (`data-state`, `data-disabled`, `data-focus`, `data-highlighted`).

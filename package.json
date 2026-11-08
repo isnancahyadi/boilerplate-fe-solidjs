@@ -1,0 +1,94 @@
+{
+  "name": "solidstart-frontend-boilerplate",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "start": "node .output/server/index.mjs",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:report": "playwright show-report",
+    "format": "biome format --write .",
+    "lint": "biome lint --write .",
+    "check": "biome check --write --unsafe .",
+    "security:audit": "pnpm audit --audit-level=high",
+    "git:commit": "cross-env CZ_COMMIT=1 cz",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@ark-ui/solid": "^5.40.0",
+    "@formisch/solid": "^1.3.0",
+    "@solid-primitives/i18n": "^2.2.1",
+    "@solid-primitives/scheduled": "^1.5.3",
+    "@solidjs/meta": "^0.29.4",
+    "@solidjs/router": "^1.0.0",
+    "@solidjs/start": "^2.0.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@tanstack/solid-query": "^5.105.3",
+    "@tanstack/solid-table": "^9.3.1",
+    "axios": "^1.21.0",
+    "axios-auth-refresh": "^5.0.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "dayjs": "^1.11.23",
+    "js-cookie": "^3.0.8",
+    "lucide-solid": "^1.67.0",
+    "nitro": "^3.0.260610-beta",
+    "solid-js": "^1.9.14",
+    "solid-zustand": "^2.0.0",
+    "tailwind-merge": "^3.7.0",
+    "tailwindcss": "^4.3.3",
+    "valibot": "^1.5.0",
+    "vite": "^8.3.5",
+    "zustand": "^5.0.16"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.4",
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "@playwright/test": "^1.64.1",
+    "@types/js-cookie": "^3.0.6",
+    "commitizen": "^4.3.2",
+    "cross-env": "^10.1.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "happy-dom": "^21.0.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "prettier": "^3.9.10",
+    "prettier-plugin-sort-json": "^4.2.0",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,json,jsonc}": [
+      "biome check --write"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "pnpm": {
+    "overrides": {
+      "browserslist": ">=4.29.5",
+      "follow-redirects": ">=1.16.2",
+      "nanoid": ">=3.3.20",
+      "picomatch": ">=2.3.2",
+      "seroval": ">=1.7.7",
+      "source-map-js": ">=1.2.2"
+    }
+  },
+  "intent": {
+    "skills": [
+      "*"
+    ]
+  }
+}
